@@ -1,6 +1,5 @@
 $ddpurple:    #774DA2;
 
-
 .announcement_banner.open ~ header {
   margin-top: 30px !important;
   background: #fff;
@@ -244,7 +243,6 @@ body > header {
 }
 
 
-
 //@include media-breakpoint-down(lg)
 @media (max-width: 1199px) {
   body > header {
@@ -269,4 +267,31 @@ body > header {
     line-height: 19px;
     transform: translateY(-5px);
   }
+}
+
+
+// feedback button (overriden)
+
+#_hj-f5b2a1eb-9b07_feedback[data-minimized-position="middle_right"] ._hj-f5b2a1eb-9b07_feedback_minimized_label {
+  right: -10px !important;
+  transition: .125s;
+
+  @media (max-width: 575px){
+    display: none;
+  }
+}
+
+#_hj-f5b2a1eb-9b07_feedback ._hj-f5b2a1eb-9b07_feedback_minimized_label:hover{
+  box-shadow: none !important;
+}
+#_hj-f5b2a1eb-9b07_feedback[data-minimized-position=middle_right] ._hj-f5b2a1eb-9b07_feedback_minimized_label:hover{
+  right: 0px !important;
+}
+
+#_hj-f5b2a1eb-9b07_feedback ._hj-f5b2a1eb-9b07_feedback_minimized_label ._hj-f5b2a1eb-9b07_feedback_minimized_label_text{
+  color: white!important;
+  font-family: National !important;
+  font-weight: 600;
+  text-transform: uppercase !important;
+  font-size: 14px;
 }
