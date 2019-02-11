@@ -20,7 +20,7 @@ further_reading:
 Taking inspiration from bedrock tools like *htop* and *ctop*, live containers give you complete coverage of your container infrastructure in a continuously updated table with resource metrics at two-second resolution and faceted search.
 Coupled with integrations for [Docker][2], [Kubernetes][3], [ECS][4], and other container technologies, plus built-in tagging of dynamic components, the live container view provides a detailed overview of your containers' health, resource consumption, and deployment in real time:
 
-{{< img src="graphing/infrastructure/livecontainers/LiveContainersWithSummaries.png" alt="Live containers with summaries" responsive="true" >}}
+{{< img src="graphing/infrastructure/livecontainers/livecontainerswithsummaries.png" alt="Live containers with summaries" responsive="true" >}}
 
 ## Installation
 
@@ -120,6 +120,22 @@ The query at the top of the scatter plot analytic allows you to control your sca
 
 {{< img src="graphing/infrastructure/livecontainers/scatterplot.png" alt="scatterplot" responsive="true" style="width:80%;">}}
 
+## Logs in Side Panel
+
+For any container sending logs to Datadog, you can view and search these logs in the side panel with access to real-time [Live Tail][8] data.
+
+To access the logs for your live containers, from the [Containers][1] page click on your desired container to reveal the side panel. From here select the "Logs" tab :
+
+{{< img src="graphing/infrastructure/livecontainers/accessingsidepanel.png" alt="Logs Tab" responsive="true" style="width:60%;">}}
+
+Initially the logs will be displayed from the Live Tail view, and you will be able to search across the incoming messages. An example of a search that could be done here would be for logs that have a status of `Error`. 
+
+We also allow you to search across logs you have selected to index for a specific container. Simply change the timeframe to your desired time window in the top right corner & your search expands to display the relevant logs.
+
+As you can see in the preview below, we also provide you with the ability to leverage custom facets. Datadog automatically incorporates key attributes about your logs into facets,  so you can quickly search, filter & aggregate your data within this side panel view.
+
+{{< img src="graphing/infrastructure/livecontainers/livecontainerlogssidepanel.gif" alt="Preview Logs Sidepanel" responsive="true" style="width:80%;">}}
+
 
 ## Real-time monitoring
 
@@ -147,3 +163,5 @@ While actively working with the containers page, metrics are collected at a 2-se
 [5]: /agent/docker/#run-the-docker-agent
 [6]: /tagging
 [7]: https://gist.github.com/hkaj/404385619e5908f16ea3134218648237
+[8]: https://docs.datadoghq.com/logs/live_tail
+
