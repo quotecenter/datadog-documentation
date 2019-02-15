@@ -122,17 +122,17 @@ The query at the top of the scatter plot analytic allows you to control your sca
 
 ## Logs in Side Panel
 
-For any container sending logs to Datadog, you can view and search these logs in the side panel. This includes near real-time log data from [Live Tail][7].
+If a container is sending logs to Datadog, you can view and search these logs in the side panel. This includes near-real-time log data from [Live Tail][7].
 
-To access the logs for your live containers, navigate to the [Containers][1] page, and then click on the container you want to reveal in the side panel. From here you can select the "Logs" tab :
+To access the logs for your live containers, navigate to the [Containers][1] page, and then click on the container you want to reveal in the side panel. From here, you can select the "Logs" tab:
 
 {{< img src="graphing/infrastructure/livecontainers/accessingsidepanel.png" alt="Logs Tab" responsive="true" style="width:60%;">}}
 
-Initially, logs from the Live Tail view will be displayed, and you will be able to search across the log lines as they come in. 
+Initially, logs from the Live Tail view are be displayed, and you can search across the log lines as they come in. 
 
-We also allow you to search across container logs that you have chosen to index. This can be done by changing the timeframe in the top right corner of the side panel, to your desired time window. This will expand your search to display the relevant logs within the new timeframe.
+You can also search across container logs that you have chosen to index. This can be done by changing the timeframe (in the top right corner of the side panel) to your desired time window. This expands your search to display the relevant logs within the new timeframe.
 
-As shown in the preview below, you have the ability to logically filter logs by leveraging tags. An example search would be for container logs that explicitly have an `Error` status.  Key attributes about your logs are already stored in tags, which enables you to search, filter & aggregate as needed.
+As shown in the preview below, you can logically filter logs by leveraging tags. For example, you can search for container logs that explicitly have an `Error` status. Key attributes about your logs are already stored in tags, which enables you to search, filter, and aggregate as needed.
 
 {{< img src="graphing/infrastructure/livecontainers/livecontainerlogssidepanel.gif" alt="Preview Logs Sidepanel" responsive="true" style="width:80%;">}}
 
