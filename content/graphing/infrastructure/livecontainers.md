@@ -120,19 +120,19 @@ The query at the top of the scatter plot analytic allows you to control your sca
 
 {{< img src="graphing/infrastructure/livecontainers/scatterplot.png" alt="scatterplot" responsive="true" style="width:80%;">}}
 
-## Logs in the side panel
+## Container logs
 
-If a container is sending logs to Datadog, you can view and search these logs in the side panel. This includes near-real-time log data from [Live Tail][7].
+You can view and search logs for any container that reports logs to Datadog. This enables you to see near-real-time log data from [Live Tail][7].
 
-To access the logs for your live containers, navigate to the [Containers][1] page, and then click on the container you want to reveal in the side panel. From here, you can select the "Logs" tab:
+Click on any container listed on the [Containers][1] page. This opens up a panel on the right that displays more details about this particular container. Clicking on the "Logs" tab in this panel brings up searchable logs. 
 
 {{< img src="graphing/infrastructure/livecontainers/accessingsidepanel.png" alt="Logs Tab" responsive="true" style="width:60%;">}}
 
-Initially, logs from the Live Tail view are be displayed, and you can search across the log lines as they come in. 
+Filter your logs by using tags. For example, to search for logs that have an `Error` status, type `status:error` into the search box. Autocompletion can help you locate the particular tag that you want. Key attributes about your logs are already stored in tags, which enables you to search, filter, and aggregate as needed.
 
-You can also search across container logs that you have chosen to index. This can be done by changing the timeframe (in the top right corner of the side panel) to your desired time window. This expands your search to display the relevant logs within the new timeframe.
+By default, the Live Tail view of container logs are shown; these logs are displayed in near-real-time: specifically, when they exit a [pipeline][8]. For more details about Live Tail, see the [Live Tail documentation][7]. 
 
-As shown in the preview below, you can logically filter logs by leveraging tags. For example, you can search for container logs that explicitly have an `Error` status. Key attributes about your logs are already stored in tags, which enables you to search, filter, and aggregate as needed.
+You can search across the log lines as they come in. You can also pause the Live Tail view or switch to a static timeframe. The timeframe panel in the upper-right corner enables you to select your desired time window. This expands your search to display the relevant logs within the new timeframe.
 
 {{< img src="graphing/infrastructure/livecontainers/livecontainerlogssidepanel.gif" alt="Preview Logs Sidepanel" responsive="true" style="width:80%;">}}
 
@@ -147,7 +147,7 @@ While actively working with the containers page, metrics are collected at a 2-se
 
 - Real-time (2s) data collection is turned off after 30 minutes. To resume real-time collection, refresh the page.
 
-- RBAC settings can restrict Kubernetes metadata collection. Refer to the [RBAC entites for the Datadog Agent][8].
+- RBAC settings can restrict Kubernetes metadata collection. Refer to the [RBAC entites for the Datadog Agent][9].
 
 - In Kubernetes the `health` value is the containers' readiness probe, not its liveness probe.
 
@@ -164,4 +164,5 @@ While actively working with the containers page, metrics are collected at a 2-se
 [5]: /agent/docker/#run-the-docker-agent
 [6]: /tagging
 [7]: https://docs.datadoghq.com/logs/live_tail
-[8]: https://gist.github.com/hkaj/404385619e5908f16ea3134218648237
+[8]: /logs/processing/pipelines
+[9]: https://gist.github.com/hkaj/404385619e5908f16ea3134218648237
