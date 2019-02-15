@@ -120,7 +120,7 @@ The query at the top of the scatter plot analytic allows you to control your sca
 
 {{< img src="graphing/infrastructure/livecontainers/scatterplot.png" alt="scatterplot" responsive="true" style="width:80%;">}}
 
-## Logs in Side Panel
+## Logs in the side panel
 
 If a container is sending logs to Datadog, you can view and search these logs in the side panel. This includes near-real-time log data from [Live Tail][7].
 
@@ -141,7 +141,7 @@ As shown in the preview below, you can logically filter logs by leveraging tags.
 
 While actively working with the containers page, metrics are collected at a 2-second resolution. This is important for highly volatile metrics such as CPU. In the background, for historical context, metrics are collected at 10s resolution.
 
-## Notes/known issues
+## Notes and known issues
 
 - This feature does not support Windows containers at this time.
 
