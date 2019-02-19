@@ -22,6 +22,7 @@ languages:
     #languageCode: "en-US"
     disclaimer: ""
     weight: 0
+    contentDir: content/en
     menu:
 
 # Home Page
@@ -303,11 +304,6 @@ languages:
           name: "Shared Graphs"
           url: "graphing/dashboards/shared_graph/"
           weight: 130
-          parent: customnav_graphingnav_dashboards
-        - identifier: customnav_graphingnav_widgets
-          name: "Widgets"
-          url: "graphing/dashboards/widgets/"
-          weight: 140
           parent: customnav_graphingnav_dashboards
 
         # Metrics
@@ -1198,6 +1194,11 @@ languages:
           url: "account_management/saml/okta"
           weight: 550
           parent: customnav_accountmanagementnav_saml
+        - identifier: saml_safenet
+          name: "SafeNet"
+          url: "account_management/saml/safenet"
+          weight: 560
+          parent: customnav_accountmanagementnav_saml
 
         # RBAC subnav
         - identifier: rbac_log_management
@@ -1275,6 +1276,7 @@ languages:
   fr:
     disclaimer: "Cette page n'est pas encore disponible en Français, nous travaillons actuellement sur sa traduction.<br> Si vous avez des questions ou des retours sur ce projet de traduction, <a href=\"https://docs.datadoghq.com/fr/help/\">contactez-nous!</a>"
     weight: 0
+    contentDir: content/fr
     menu:
       # Home Page
       main:
@@ -1568,11 +1570,6 @@ languages:
           name: "Graphiques partagés"
           url: "graphing/dashboards/shared_graph/"
           weight: 130
-          parent: customnav_graphingnav_dashboards
-        - identifier: customnav_graphingnav_widgets
-          name: "Widgets"
-          url: "graphing/dashboards/widgets/"
-          weight: 140
           parent: customnav_graphingnav_dashboards
 
         # Metrics
@@ -2465,6 +2462,11 @@ languages:
           name: "Okta"
           url: "account_management/saml/okta"
           weight: 550
+          parent: customnav_accountmanagementnav_saml
+        - identifier: saml_safenet
+          name: "SafeNet"
+          url: "account_management/saml/safenet"
+          weight: 560
           parent: customnav_accountmanagementnav_saml
 
         - identifier: customnav_accountmanagementnav_multi_organization
